@@ -1,7 +1,7 @@
 {
-  "name": "ahp-plugin-template",
+  "name": "ahp-action-send-keys",
   "version": "0.0.1",
-  "description": "Starter template for developing AutoHotPie plugins.",
+  "description": "AHP plugin for mimicking key presses.",
   "main": "lib/src/index.js",
   "engines": {
     "node": ">=20.1"
@@ -36,7 +36,7 @@
   "author": "ryjacky <ryjacky@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "autohotpie-core": "^0.0.14",
+    "autohotpie-core": "^0.0.18",
     "tslib": "~2.6"
   },
   "volta": {

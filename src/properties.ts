@@ -5,7 +5,8 @@ import { PluginProperties, PluginType } from "autohotpie-core";
  */
 export class Properties implements PluginProperties {
   author: string = "ryjacky";
-  description: string = "Starter template for developing AutoHotPie plugins.";
-  name: string = "Starter Template";
+  description: string = "Mimics keyboard keypress.";
+  name: string = "Send Key";
   type: PluginType = PluginType.ACTION_PLUGIN;
+  parameters = [{name: "Keys", type: "hotkeys"}];
 }
