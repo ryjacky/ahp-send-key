@@ -9,5 +9,5 @@ export class Properties implements PluginProperties {
   name: string = "Send Key";
   type: PluginType = PluginType.ACTION_PLUGIN;
   parameters = [{name: "Keys", type: "hotkeys"}];
-  id: string;
+  id: string = "";
 }
