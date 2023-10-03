@@ -1,4 +1,4 @@
-import { PluginProperties, PluginType } from "autohotpie-core";
+import { PluginProperties, PluginType } from "pielette-core";
 
 /**
  * This class is used to describe the properties of the plugin.
@@ -9,4 +9,5 @@ export class Properties implements PluginProperties {
   name: string = "Send Key";
   type: PluginType = PluginType.ACTION_PLUGIN;
   parameters = [{name: "Keys", type: "hotkeys"}];
+  id: string;
 }
