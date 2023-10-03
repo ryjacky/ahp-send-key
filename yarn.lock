@@ -335,7 +335,7 @@
     "@nut-tree/libnut-linux" "2.5.2"
     "@nut-tree/libnut-win32" "2.5.2"
 
-"@nut-tree/nut-js@^3.1.2":
+"@nut-tree/nut-js@3.1.2":
   version "3.1.2"
   resolved "https://registry.npmjs.org/@nut-tree/nut-js/-/nut-js-3.1.2.tgz"
   integrity sha512-hi7DBZz9O/t4goeQu3hKeauQbb0PcBmurScl3/t5L3I1pub3ibV24sft8KNSS3INKnGCj7I3Ma5iNHQ24g+95g==
