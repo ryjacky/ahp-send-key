@@ -1,12 +1,13 @@
 {
-  "name": "pielette-addon-template",
-  "version": "0.0.1",
-  "description": "Addon template for Pielette",
+  "name": "pielette-addon-sendkeys",
+  "version": "1.1.0",
+  "description": "Send key addon for Pielette",
   "main": "lib/index.js",
   "repository": "",
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@nut-tree/nut-js": "^3.1.2",
     "@types/node": "^17.0.21",
     "pielette-core": "^0.0.22",
     "prettier": "^2.5.1",
@@ -17,7 +18,5 @@
     "build": "tsc",
     "release": "tsc && npm publish",
     "dev": "tsc -W"
-  },
-  "dependencies": {
   }
 }
