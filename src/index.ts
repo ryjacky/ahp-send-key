@@ -1,5 +1,5 @@
 import { Main } from "./main";
-import { Properties } from "./properties";
+import { AddonHeader } from "./addonHeader";
 
 /**
  * WARNING: If your project is depending on other dependencies,
@@ -10,5 +10,5 @@ import { Properties } from "./properties";
  */
 export {
   Main,
-  Properties
+  AddonHeader
 }
