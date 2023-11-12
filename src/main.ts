@@ -1,28 +1,27 @@
-import { Log, OnExecutedArgs, PieTaskAddon } from "pielette-core";
+import {Hotkey, Log, PieItemTaskAddon} from "pielette-core";
 import {Key, keyboard} from "@nut-tree/nut-js";
-import {keyConversionMap} from "./KeyConversionMap";
+import {keyMap} from "./KeyConversionMap";
 
-export class Main extends PieTaskAddon {
-  onExecuted(args: OnExecutedArgs): void {
-    Log.addon.debug("Received args: " + JSON.stringify(args));
+export class Main implements PieItemTaskAddon {
+  id: string = "official_send_keys";
+  name: string = "Send Keys";
 
-    const rawKeys = args["Keys"].split("+");
+  param_Hotkey: Hotkey = new Hotkey(false, false, false, "");
+
+  onExecuted(): void {
+    Log.addon.debug("Received args: " + JSON.stringify(this.param_Hotkey));
 
     const keys: Key[] = [];
-    for (let rawKey of rawKeys) {
-      rawKey = rawKey.trim();
-      const keyEnumMap = new Map(Object.entries(Key));
-      const key = keyConversionMap.get(rawKey) ?? "The key doesn't exist in the conversion map"
+    if (this.param_Hotkey.shift) {keys.push(Key.LeftShift)}
+    if (this.param_Hotkey.ctrl) {keys.push(Key.LeftControl)}
+    if (this.param_Hotkey.alt) {keys.push(Key.LeftAlt)}
 
-      if (rawKey !== "None" && keyEnumMap.has(key)) {
-        keys.push(keyEnumMap.get(key)! as Key);
-      }
+    const key = keyMap[this.param_Hotkey.key];
+    if (key) {
+      keys.push(key);
     }
-
     Log.addon.debug("Sending keys: " + JSON.stringify(keys));
 
-    keyboard.pressKey(...keys);
-    keyboard.releaseKey(...keys);
+    keyboard.type(...keys);
   }
-
 }

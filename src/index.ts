@@ -1,5 +1,4 @@
 import { Main } from "./main";
-import { AddonHeader } from "./addonHeader";
 
 /**
  * WARNING: If your project is depending on other dependencies,
@@ -8,7 +7,4 @@ import { AddonHeader } from "./addonHeader";
  * occurs, you might need to try out other npm packages. (You could also
  * build the Pielette from scratch and bundle the npm packages into the executable)
  */
-export {
-  Main,
-  AddonHeader
-}
+export {Main}
